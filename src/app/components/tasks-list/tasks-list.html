@@ -1,0 +1,17 @@
+@if(!taskList.length){
+<p>No Task found</p>
+}
+
+<ul>
+  @for (task of taskList; track task.id) {
+  <li [className]="isDoubleClicled() ? 'li-active':''" (dblclick)="onToggleClass()">
+    <div class="task">
+      <p>{{ task.taskName }}</p>
+      <p>{{ task.summary }}</p>
+      <p>{{task.required}}</p>
+    </div>
+          <button (click)="onDeleteTodo(task.id)">X</button>
+  </li>
+
+  }
+</ul>

@@ -1,0 +1,19 @@
+.input-block{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    input{
+        border: 1px solid #303030;
+        padding: 6px;
+    }
+}
+
+button{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 0px;
+    cursor: pointer;
+}

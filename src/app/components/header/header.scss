@@ -1,0 +1,28 @@
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p{
+        font-size: 22px;
+        font-weight: 700;
+      
+        color: rgb(36, 20, 20);
+
+    }
+    button{
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .isclose{
+        background-color: red;
+    }
+}
+
