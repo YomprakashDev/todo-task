@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { AddTaskForm } from "../../components/add-task-form/add-task-form";
 import { TasksList } from '../../components/tasks-list/tasks-list';
 import { Todo } from '../../services/todo';
@@ -13,6 +13,5 @@ export class Home {
 
   todoService = inject(Todo)
   isAddOn = this.todoService.isAddOn
-
 
 }

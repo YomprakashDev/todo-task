@@ -6,9 +6,9 @@ import { TodoModel } from '../model/todo.model';
 })
 export class Todo {
 
-locationOfUrl =''
-  taskList: TodoModel[] = []
 
+  taskList: TodoModel[] = []
+  routeOfPage:string = ''
   isAddOn = signal(false)
 
   toggelAddOn() {
@@ -26,12 +26,21 @@ locationOfUrl =''
 
   }
 
-  updateLocation(currentUrl:string){
-    this.locationOfUrl = currentUrl
+  onToggleClass(id:number){
+    const taskIndex = this.taskList.findIndex(task => task.id === id)
+    if(taskIndex !== -1){
+      this.taskList[taskIndex].required = !this.taskList[taskIndex].required
+    }
   }
+
+onUpdateRoute(route:string){
+this.routeOfPage = route
+}
 
   onDeleteTodo(id: number) {
     this.taskList = this.taskList.filter(todo => todo.id !== id)
-  
+
   }
+
+  
 }

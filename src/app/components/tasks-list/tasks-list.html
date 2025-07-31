@@ -4,7 +4,7 @@
 
 <ul>
   @for (task of taskList; track task.id) {
-  <li [className]="isDoubleClicled() ? 'li-active':''" (dblclick)="onToggleClass()">
+  <li [className]="task.required  ? 'li-active':''" (dblclick)="onToggleClass(task.id)">
     <div class="task">
       <p>{{ task.taskName }}</p>
       <p>{{ task.summary }}</p>

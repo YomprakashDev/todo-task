@@ -1,4 +1,7 @@
 <header>
   <p>Task Tracker</p>
-  <button [className]="isAddOn() ? 'isclose':''" (click)="toggelAddOn()">{{isAddOn()?'Close':'Add'}}</button>
+  @if (hasRoute('/')) {
+     <button [className]="isAddOn() ? 'isclose':''" (click)="toggelAddOn()">{{isAddOn()?'Close':'Add'}}</button>
+  }
+ 
 </header>

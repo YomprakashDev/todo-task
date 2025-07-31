@@ -11,15 +11,16 @@ export class TasksList {
 
   todoService = inject(Todo);
   taskList = this.todoService.taskList
-  isDoubleClicled = signal(false)
   onDeleteTodo(id:number){
     console.log(id)
     this.todoService.onDeleteTodo(id);
     this.taskList = this.todoService.taskList;
   }
 
-  onToggleClass(){
-    this.isDoubleClicled.update((prv) => !prv)
+  onToggleClass(id:number){
+    
+    this.todoService.onToggleClass(id)
+    this.taskList = this.todoService.taskList
   }
 
 }
